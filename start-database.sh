@@ -9,7 +9,7 @@
 
 # On Linux and macOS you can run this script directly - `./start-database.sh`
 
-DB_CONTAINER_NAME="projectmanagementapp-mysql"
+DB_CONTAINER_NAME="projectmanagementapp-postgresql"
 
 if ! [ -x "$(command -v docker)" ]; then
   echo -e "Docker is not installed. Please install docker and try again.\nDocker install guide: https://docs.docker.com/engine/install/"
@@ -53,7 +53,7 @@ fi
 
 docker run -d \
   --name $DB_CONTAINER_NAME \
-  -e MYSQL_ROOT_PASSWORD="$DB_PASSWORD" \
-  -e MYSQL_DATABASE=projectmanagementapp \
+  -e postgresql_ROOT_PASSWORD="$DB_PASSWORD" \
+  -e postgresql_DATABASE=projectmanagementapp \
   -p "$DB_PORT":3306 \
-  docker.io/mysql && echo "Database container '$DB_CONTAINER_NAME' was successfully created"
+  docker.io/postgresql && echo "Database container '$DB_CONTAINER_NAME' was successfully created"
