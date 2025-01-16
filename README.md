@@ -27,3 +27,11 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+
+## Run this Code
+ - Firstly Run npm install 
+ - Secondly Pass Discord client id and Secreat id
+ - Third npx prisma migrate dev 
+ - Npm run dev
+ 
